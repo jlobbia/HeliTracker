@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.helitracker.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_hirobohuey"
+        android:name="com.example.helitracker.ui.gallery.HiroboHueyFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_hirobohuey" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.helitracker.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_custom1"
+        android:name="com.example.helitracker.ui.Custom1Fragment"
+        android:label="Custom1Fragment"
+        tools:layout="@layout/fragment_custom1">
+        <action
+            android:id="@+id/action_nav_custom1_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_greeting"
+        android:name="com.example.helitracker.GreetingFragment"
+        android:label="GreetingFragment" >
+        <action
+            android:id="@+id/action_nav_greeting_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+
+</navigation>
